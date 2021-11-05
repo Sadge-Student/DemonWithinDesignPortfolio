@@ -1,0 +1,23 @@
+@font-face {
+  font-family: "BlenderProHeavy";
+  /* This is an arbitrary name -- whatever works for you */
+  src: url("https://cdn.glitch.com/e0644440-9dc1-433d-a852-23d7d5f44df7%2FBlender-Pro-Heavy.otf?v=1579022118036"),
+    url("https://cdn.glitch.com/e0644440-9dc1-433d-a852-23d7d5f44df7%2FBlender-Pro-Heavy.otf?v=1579022118036")
+      format("otf");
+}
+
+@font-face {
+  font-family: "BlenderProMedium";
+  /* This is an arbitrary name -- whatever works for you */
+  src: url("https://cdn.glitch.com/e0644440-9dc1-433d-a852-23d7d5f44df7%2FBlender-Medium.otf?v=1579029300584"),
+    url("https://cdn.glitch.com/e0644440-9dc1-433d-a852-23d7d5f44df7%2FBlender-Medium.otf?v=1579029300584")
+      format("otf");
+}
+
+.blenderproH {
+  font-family: "BlenderProHeavy", sans-serif;
+}
+
+.BlenderProM {
+  font-family: "BlenderProMedium", sans-serif;
+}
