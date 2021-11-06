@@ -8,7 +8,7 @@ import Konami from "react-konami-code";
 
 function easteregg() {
   var iframe = document.createElement('iframe');
-  iframe.src = "https://www.youtube.com/embed/wERoLoUkZFQ?autoplay=1&showinfo=0&controls=0";
+  iframe.src = "https://www.youtube.com/embed/aW0DRWhdZyY?autoplay=1&showinfo=0&controls=0";
   iframe.width = "100%";
   iframe.height = "100%";
   iframe.position = "absolute";
@@ -119,7 +119,8 @@ export default function Index({ posts, author }) {
 
         #videoFrame {
           height: 100vh;
-          width: 99vw;
+          width: 100vw;
+          overflow: hidden;
           position: absolute;
           z-index: 77;
         }

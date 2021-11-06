@@ -77,8 +77,8 @@ const Footer = () => (
           <span className={Fstyle.favicon}>
             <img alt="Twitter Icon" src={ZeitLogo}></img>
           </span>
-          <a href="https://zeit.co/" target="_blank">
-            <span>ZEIT</span>
+          <a href="https://vercel.com/" target="_blank">
+            <span>Vercel</span>
           </a>
         </div>
       </div>

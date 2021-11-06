@@ -247,7 +247,7 @@ function NewMenu() {
           border: solid 2px transparent;
           border-radius: 50%;
           background-image: linear-gradient(transparent, transparent),
-            linear-gradient(to right, rgb(255, 100, 205), transparent);
+            linear-gradient(to right, rgb(129, 128, 255), transparent);
           background-origin: border-box;
           background-clip: content-box, border-box;
         }
@@ -415,7 +415,7 @@ function NewMenu() {
           background: #fff;
         }
         .button_container span {
-          background: #30ace0;
+          background: #8180ff;
           border: none;
           height: 5px;
           width: 100%;
@@ -434,7 +434,7 @@ function NewMenu() {
 
         .overlay {
           position: fixed;
-          background: #0039a0;
+          background: #8180ff;
           top: 0;
           left: 0;
           width: 100%;

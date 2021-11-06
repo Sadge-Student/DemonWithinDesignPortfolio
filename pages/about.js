@@ -370,11 +370,11 @@ const About = (props) => {
           position: relative;
         }
 
-        li {
+        .block-content li {
           list-style: none;
         }
 
-        li:before {
+        .block-content li:before {
           content: "•";
           animation: neon 1.5s ease-in-out infinite alternate;
           color: #ffffff;

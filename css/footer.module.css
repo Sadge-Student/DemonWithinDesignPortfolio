@@ -29,7 +29,7 @@
   height: 200px;
   align-items: flex-start;
   grid-area: auto / page-start/ auto / page-end;
-  border-top: solid 2px rgb(87, 93, 118);
+  border-top: solid 2px rgb(129, 128, 255);
   margin-top: 3%;
 }
 

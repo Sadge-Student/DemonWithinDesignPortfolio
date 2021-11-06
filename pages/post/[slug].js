@@ -45,6 +45,7 @@ const serializers = {
         >
           {/* {JSON.stringify(props, null)}  this shows all the info */}
         </iframe>
+        {/* <p>{JSON.stringify(props, null)}</p> */}
       </div>
     ),
 
@@ -245,6 +246,7 @@ const Post = (props) => {
           width: 100%;
           height: 25em;
           margin-bottom: 1rem;
+          object-fit: cover;
         }
 
         .header-content {
@@ -253,11 +255,11 @@ const Post = (props) => {
           position: relative;
           background-image: linear-gradient(
             to right,
-            rgb(255, 100, 205) 0%,
-            rgb(128, 128, 255) 50%,
-            rgb(0, 255, 225) 100%
+              #8180ff 0%,
+              #8180ff 100%
           );
-          /* box-shadow: rgba(0, 0, 0, 0.5) 0px 8px 0px 0px; */
+          -webkit-box-shadow: 4px 4px 22px -3px #8180ff; 
+          box-shadow: 4px 4px 22px -3px #8180ff;
           padding: 2em;
           /* padding-top: 1em;
           padding-right: 1em;
@@ -267,6 +269,9 @@ const Post = (props) => {
           color: white;
           display: inline-block;
           margin-bottom: 1rem;
+          top: -10rem;
+          left: 1rem;
+          border-radius: 25px;
         }
 
         .header-content:before {
@@ -278,6 +283,7 @@ const Post = (props) => {
           left: 7px;
           /* box-shadow: rgba(0,0,0,0.61) 0px 0px 0px 2px; */
           background: rgb(23, 24, 32);
+          border-radius: 25px;
         }
 
         .published {
@@ -290,9 +296,10 @@ const Post = (props) => {
         }
 
         .title {
-          font-size: 96px;
+          font-size: 64px;
           font-weight: normal;
           margin-bottom: 1rem;
+          font-family: "ponde", sans-serif;
         }
 
         .block-content {
@@ -320,11 +327,13 @@ const Post = (props) => {
           }
 
           .Rsection {
-            display: none;
+            // display: none;
           }
 
           .header-content {
             width: 92%;
+            top: -4rem;
+            left: -.25rem;
           }
 
           .post-image {
@@ -354,7 +363,17 @@ const Post = (props) => {
           }
 
           .header-content {
-            width: 90%;
+            width: 82%;
+            box-shadow: none;
+            margin-bottom: none;
+          }
+
+          .title {
+            margin-bottom: 0;
+          }
+
+          .published {
+            display: none;
           }
         }
 
@@ -404,7 +423,7 @@ const Post = (props) => {
 
         .block-content {
           color: white;
-          margin: 1rem;
+          margin: -5rem 1rem 1rem 1rem;
         }
 
         .block-content h2 {
@@ -484,7 +503,7 @@ const Post = (props) => {
 
         .youtube-embed {
           width: 100%;
-          height: 650px;
+          height: 30rem;
         }
 
         .codepen-embed {
@@ -568,11 +587,21 @@ const Post = (props) => {
           img {
             width: 100%;
           }
+
+          .youtube-embed {
+            width: 100%;
+            height: 12rem;
+          }
         }
 
         @media only screen and (max-width: 1024px) {
           img {
             width: 100%;
+          }
+
+          .youtube-embed {
+            width: 100%;
+            height: 16rem;
           }
         }
       `}</style>
