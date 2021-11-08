@@ -164,11 +164,13 @@ const About = (props) => {
         }
 
         h1 {
+          text-shadow: 2px 0 0 #000, 0 -2px 0 #000, 0 2px 0 #000, -2px 0 0 #000;
           color: white;
           font-size: 64px;
           position: absolute;
           bottom: 60px;
           left: 28px;
+          font-family: "Ponde", sans-serif;
         }
 
         .article {
@@ -445,9 +447,9 @@ const About = (props) => {
         .block-content a:hover .underline {
           background-image: linear-gradient(
             to left,
-            rgb(0, 255, 225) 0%,
-            rgb(0, 255, 255) 50%,
-            rgb(0, 225, 255) 100%
+            rgb(129,128,255) 0%,
+            rgb(129,128,255) 50%,
+            rgb(129,128,255) 100%
           );
         }
         .block-content a {
@@ -455,6 +457,10 @@ const About = (props) => {
           color: rgb(139, 233, 253);
           text-decoration: none;
           transition: color 250ms ease 0s;
+        }
+
+        .block-content p a:hover {
+          color: rgb(129,128,255);
         }
 
         .block-content p {

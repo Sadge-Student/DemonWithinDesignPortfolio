@@ -138,16 +138,9 @@
   opacity: 1;
 }
 
-@media only screen and (max-width: 768px) {
-  .mylinks {
-    top: 41%;
-  }
-  .builtwith {
-    top: 40%;
-  }
-
-  .rlinks {
-    margin: auto 30%;
+@media only screen and (max-width: 1024px) {
+  .link span {
+    display: none;
   }
 
   .follow {
@@ -155,6 +148,35 @@
   }
 
   .bwith {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .footer {
+    height: 100px;
+  }
+
+  .mylinks {
+    top: 41%;
+  }
+  .builtwith {
+    top: 40%;
+  }
+
+  .follow {
+    display: none;
+  }
+
+  .bwith {
+    display: none;
+  }
+
+  .rlinks {
+    margin: 0 0;
+  }
+
+  .link span {
     display: none;
   }
 }

@@ -72,13 +72,15 @@ const serializers = {
     imageStyle: (props) => (
       <div className="imageStyleDiv">
         <h3 className="imageStyleHeader">{props.node.caption}</h3>
-      <figure className="imageStyle">
-        <a className="imageStyleA" href={props.node.url}>
-          <div className="imageStyleOverlay"></div>
-          <img src={urlFor(props.node)}></img>
-          <figcaption className="imageStyleFigCaption">{props.node.caption}</figcaption>
-        </a>
-      </figure>
+
+          <figure className="imageStyleWrapper">
+            <a className="imageStyleA" href={props.node.url}>
+              {/* <div className="imageStyleOverlay"></div> */}
+              <img src={urlFor(props.node)} />
+              <figcaption className="imageStyleFigCaption">{props.node.caption}</figcaption>
+            </a>
+          </figure>
+
       </div>
     ),
 
@@ -409,8 +411,13 @@ const Post = (props) => {
 
         img {
           /* width: 100%; */
-          height: 100%;
+          // height: 100%;
+          // position: relative;
+          height: 250px;
           position: relative;
+          width: auto;
+          max-height: 600px;
+          object-fit: contain;
         }
 
         h4 {
@@ -428,8 +435,8 @@ const Post = (props) => {
 
         .block-content h2 {
           font-size: 32px;
-          margin: 3% 0;
-          display: inline;
+          margin: 3% 0 0 0;
+          display: block;
         }
 
         .block-content h2 a {
@@ -469,9 +476,9 @@ const Post = (props) => {
         .block-content a:hover .underline {
           background-image: linear-gradient(
             to left,
-            rgb(0, 255, 225) 0%,
-            rgb(0, 255, 255) 50%,
-            rgb(0, 225, 255) 100%
+            rgb(129, 128, 255) 0%,
+            rgb(129, 128, 255) 50%,
+            rgb(129, 128, 255) 100%
           );
         }
         .block-content a {
@@ -488,7 +495,12 @@ const Post = (props) => {
 
         .block-content ul,
         .block-content li {
-          font-size: 16px;
+          font-size: 20px;
+          color: rgba(255, 255, 255, 0.7);
+        }
+
+        .block-content blockquote {
+          font-size: 20px;
           color: rgba(255, 255, 255, 0.7);
         }
 
@@ -519,18 +531,7 @@ const Post = (props) => {
         .imageStyleDiv {
           position: relative;
           display: inline-block;
-        }
-
-        .imageStyle {
-
-        }
-
-        .imageStyle img {
-          object-fit: cover;
-          width: 200px;
-          height: 200px;
-          border: solid black 10px;
-          border-radius: 25px;
+          margin: 2em 0 1em 0;
         }
 
         .imageStyleA {
@@ -538,48 +539,54 @@ const Post = (props) => {
           display: inline-block;
         }
 
-        .imageStyleFigCaption {
-          opacity: 0;
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-          line-height: 100%;
-          z-index: 77;
-          color: #FFFFFF;
-          transition: opacity 1s;
-        }
-
-        .imageStyleOverlay {
-          position: absolute;
-          height: 100%;
-          width: 100%;
-          background-color: rgba(0,0,0,0.4);
-          z-index: 78;
-          border-radius: 25px;
-          transform: translate(0%, -1%);
-          scale: 1;
-          opacity: 0;
-          transition: opacity 2s;
-        }
-
-        .imageStyle .imageStyleOverlay:hover {
-          opacity: 1;
-        }
-
         .imageStyleHeader {
           position: absolute;
           top: -13%;
           left: 19%;
-          z-index: 77;
+          z-index: 50;
         }
 
-        .imageStyle .imageStyleOverlay:hover ~ .imageStyleFigCaption {
+        .imageStyleWrapper {
+          position: relative;
+        }
+
+        .imageStyleWrapper img {
+          position: relative;
+          object-fit: cover;
+          width: 200px;
+          height: 200px;
+          border: solid #8180FF 5px;
+          border-radius: 25px;
+        }
+
+        .imageStyleWrapper:hover .imageStyleFigCaption {
+          visibility: visible;
           opacity: 1;
         }
 
-        .block-content h2:hover .linkicon path {
+        .imageStyleFigCaption {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          background: rgba(129, 128, 255, 0.72);
+          color: #fff;
+          visibility: hidden;
+          opacity: 0;
+          border-radius: 25px;
+          line-height: 200px;
+          text-align: center;
+          font-size: 16px;
+          font-family: "ponde", sans-serif;
+          text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+
+        
+          /* transition effect. */
+          transition: opacity .5s, visibility .5s;
+        }
+
+        .block-content a:hover .linkicon path {
           opacity: 1;
         }
 
@@ -602,6 +609,29 @@ const Post = (props) => {
           .youtube-embed {
             width: 100%;
             height: 16rem;
+          }
+        }
+
+        @media only screen and (max-width: 425px) {
+          .block-content h2 {
+            font-size: 20px;
+          }
+
+          .linkicon {
+            display: none;
+          }
+
+          .block-content p {
+            font-size: 14px;
+            line-height: 20px;
+          }
+
+          .block-content ul, .block-content li {
+            font-size: 14px;
+          }
+
+          .block-content blockquote {
+            font-size: 14px;
           }
         }
       `}</style>

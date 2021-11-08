@@ -48,7 +48,7 @@ export default function Index({ posts, author }) {
 
         .block p {
           display: grid;
-          font-family: BlenderProMedium, Helvetica, Arial, sans-serif;
+          font-family: "PixelFont", Helvetica, Arial, sans-serif;
           font-size: 24px;
           color: white;
           position: absolute;
