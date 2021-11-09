@@ -199,6 +199,21 @@ const Post = (props) => {
       </SlugLayout>
 
       <style jsx>{`
+
+      @font-face {
+        font-family: "Ponde";
+        src: url("https://cdn.glitch.me/e0644440-9dc1-433d-a852-23d7d5f44df7%2Fponde___.ttf?v=1636136028723"),
+          url("https://cdn.glitch.me/e0644440-9dc1-433d-a852-23d7d5f44df7%2Fponde___.ttf?v=1636136028723")
+            format("ttf");
+      }
+
+      @font-face {
+        font-family: "PixelFont";
+        src: url("https://cdn.glitch.me/e0644440-9dc1-433d-a852-23d7d5f44df7%2FSpookyPixelFont-Regular.ttf?v=1636136053962"),
+          url("https://cdn.glitch.me/e0644440-9dc1-433d-a852-23d7d5f44df7%2FSpookyPixelFont-Regular.ttf?v=1636136053962")
+            format("ttf");
+      }
+
         * {
           margin: 0;
           padding: 0;
