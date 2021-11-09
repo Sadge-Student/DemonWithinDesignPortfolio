@@ -1,14 +1,24 @@
 // import App from 'next/app'
 import NewMenu from "../components/NewMenu";
 import Head from "next/head";
+import dynamic from 'next/dynamic'
+import "nprogress/nprogress.css"
+
+const TopProgressBar = dynamic(
+  () => {
+    return import("../components/TopProgressBar");
+  },
+  { ssr: false },
+);
 
 function MyApp({ Component, pageProps }) {
+
   return (
     <>
       <Head>
-        <link rel="shortcut icon" href="/favicon.ico" />
         <meta content="width=device-width, initial-scale=1" name="viewport" />
       </Head>
+      <TopProgressBar />
       <NewMenu />
       <Component {...pageProps} />
       <style global jsx>{`
@@ -34,6 +44,10 @@ function MyApp({ Component, pageProps }) {
           overflow: hidden;
           background: hsla(0, 0%, 100%, 0);
         }
+
+        #nprogress .bar {
+          background: #8180FF !important;
+          }
       `}</style>
     </>
   );

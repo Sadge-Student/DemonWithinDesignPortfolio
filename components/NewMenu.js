@@ -1,4 +1,7 @@
+import Link from 'next/link'
+
 function NewMenu() {
+
   function click() {
     const body = document.body;
     const burgerContain = document.getElementsByClassName("b-container")[0];
@@ -24,23 +27,6 @@ function NewMenu() {
     });
   }
 
-  function easteregg() {
-    const body = document.body;
-    const iframe = document.createElement('iframe');
-    const post = document.getElementsByClassName("post");
-  
-    [post].forEach(function (el) {
-      el.classList.toggle("active");
-      console.log("click");
-    });
-  
-    iframe.src = "https://www.youtube.com/embed/glFc9E1UH4s?autoplay=1";
-    iframe.width = "100%";
-    iframe.height = "100%";
-    const videoDiv = document.getElementsByClassName('videoFrame');
-    videoDiv.appendChild(iframe);
-  }
-
   return (
     <>
       <div className="button_container" id="toggle" onClick={mclick}>
@@ -52,13 +38,19 @@ function NewMenu() {
         <nav className="overlay-menu">
           <ul>
             <li>
-              <a href="/">Home</a>
+              <Link href="/">
+                <a>Home</a>
+              </Link>
             </li>
             <li>
-              <a href="/posts">Posts</a>
+              <Link href="/posts">
+                <a>Posts</a>
+              </Link>
             </li>
             <li>
-              <a href="/about">About</a>
+              <Link href="/about">
+                <a>About</a>
+              </Link>
             </li>
             <li>
               <a href="mailto:123@abc.com" target="_top">
