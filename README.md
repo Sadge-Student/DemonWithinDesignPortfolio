@@ -10,5 +10,9 @@ Burndown Chart: https://docs.google.com/spreadsheets/d/1dvnM-BTzlnv5uDbnktO0eZX1
 
 Website: https://dw-portfolio.vercel.app/
 
+Prototype: https://ad2306.itch.io/demon-within
+
+Full Game: https://ad2306.itch.io/demon-within-complete (PS: has an EasterEgg) 
+
 Website link can be found here ↓
 ![where site](https://cdn.glitch.me/e0644440-9dc1-433d-a852-23d7d5f44df7%2Ftutorial.PNG?v=1636230136190)  
